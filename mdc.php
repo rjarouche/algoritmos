@@ -1,20 +1,19 @@
 <?php
 
-function mdc(int $m,int $n)
+function mdc($m, $n)
 {
-      if($n>$m){
-         $temp = $n;
-         $n = $m;
-         $m = $temp;
-      }
+    if ($n > $m) {
+        $temp = $n;
+        $n = $m;
+        $m = $temp;
+    }
 
-       if($n == 0){
-          return $m;
-       }
-       
-       return mdc($n,$m%$n);
-          
+    if ($n == 0) {
+        return $m;
+    }
+
+    return mdc($n, $m % $n);
+
 }
 
-
-echo mdc(16,8);
+echo mdc(16, 8);
